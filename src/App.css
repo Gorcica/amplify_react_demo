@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+/*.amplify-button[data-variation='primary'] {*/
+/*  background: #1C2B53;*/
+/*}*/
+
+/*.amplify-button:hover {*/
+  /*background-color: #B3B3B3;  ライトグレー 
+  color: #1C2B53; /* ダークブルーの対比色 */
+/*}*/
+
+/* ボタンがクリックされたときの色 */
+/*.amplify-button:active 
+  background-color: #B3B3B3; /* グレー */
+/*  color: #FFFFFF;*/
+/*}*/

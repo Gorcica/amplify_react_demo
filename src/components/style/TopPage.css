@@ -1,0 +1,12 @@
+.fc-event{
+    font-size: 12px;
+}
+
+.fc-event-time, .fc-event-title {
+          padding: 0 1px;
+          white-space: normal;
+}
+
+.fc-h-event .fc-event-main-frame {
+          display: block; /* for make fc-event-title-container expand */
+}
