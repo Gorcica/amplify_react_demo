@@ -9,6 +9,7 @@ frontend:
       commands:
         - ls
         - npm run build:dev
+        - ls
   artifacts:
     baseDirectory: ./dist
     files:
