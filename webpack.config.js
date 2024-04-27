@@ -1,8 +1,9 @@
 // webpack.config.js
 
-const dotenv = require("dotenv");
-const webpack = require("webpack");
-const path = require("path");
+const dotenv = require('dotenv');
+const webpack = require('webpack');
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -46,21 +47,24 @@ module.exports = {
   },
   resolve: {
     fallback: {
-      buffer: require.resolve("buffer/"),
-      os: require.resolve("os-browserify/browser"),
-      crypto: require.resolve("crypto-browserify"),
-      stream: require.resolve("stream/"),
+      buffer: require.resolve('buffer/'),
+      os: require.resolve('os-browserify/browser'),
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream/'),
     },
     alias: {
       '~': path.resolve(__dirname, 'src'),
-       './aws-exports': path.resolve(__dirname, 'src/aws-exports.js'),
+      './aws-exports': path.resolve(__dirname, 'src/aws-exports.js'),
     },
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
 
   plugins: [
     new webpack.DefinePlugin({
-      "process.env": JSON.stringify(process.env),
+      'process.env': JSON.stringify(process.env),
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'public', to: '' }],
     }),
   ],
 };
