@@ -64,7 +64,7 @@ module.exports = {
       'process.env': JSON.stringify(process.env),
     }),
     new CopyPlugin({
-      patterns: [{ from: 'public', to: 'public' }],
+      patterns: [{ from: 'public', to: '' }],
     }),
   ],
 };
