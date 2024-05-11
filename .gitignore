@@ -21,11 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-build/
-dist/
-node_modules/
-amplifytools.xcconfig
-.secret-*
-**.sample
-#amplify-do-not-edit-end
